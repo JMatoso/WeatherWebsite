@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2196fa"/>
+    <meta name="msapplication-navbutton-color" content="#2196fa"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2196fa"/>
+
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main role="main">
+        <div>
+            <div id="snackbar"><span id="snack"></span></div>
+            <video autoplay muted loop class="background-video" id="video">
+                <source src="" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <div class="wbig saturated">
+                <div style="padding: 30px;">
+                    <div class="search-bar center text-center box-shadow">
+                        <input type="text" autocomplete="off" placeholder="Search a Location" id="search">
+                        <img id="spinner" class="transparent" style="float: left;" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/YouTube_loading_symbol_3_%28transparent%29.gif" alt="Loading..." width="50px" height="50" style="margin-left: 5px; margin-right: 5px;">
+                    </div>
+                </div>
+                <div class="weather">                    
+                    <div class="weather-body">                  
+                        <div id="results" class="d-none">
+                            <div>
+                                <span class="text-big-size" id="degree"></span>
+                                <span class="text-big-size">&nbsp; | &nbsp;</span>
+                                <span class="text-big-size" id="degree-feels-like"></span>
+                                <span>Temperature | Feels Like</span>
+                                <span data-feather="thermometer"></span>
+        
+                                <div style="line-height: 75%;">
+                                    <h1 id="location"></h1>
+                                    <strong>
+                                        <small id="time" class="text-muted"></small>
+                                        <small class="text-muted">|</small>
+                                        <span id="description" class="text-white"></span>
+                                    </strong>
+                                </div>
+                            </div>
+            
+                            <div>    
+                                <div style="line-height: 75%;">
+                                    <h3 id="pressure"></h3>
+                                    <h3 id="humidity"></h3>
+                                    <h3 id="wind"></h3>
+                                    <h3 id="visibility"></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <small class="text-muted">
+                                © <span id="year"></span>, All rights reserved.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/manuelmhtr/countries-and-timezones@latest/dist/index.min.js" type="text/javascript"></script>
+<script src="js/app.js"></script>
+</html>
