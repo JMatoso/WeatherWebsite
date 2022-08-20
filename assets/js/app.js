@@ -1,4 +1,20 @@
+'use strict';
+
 document.getElementById('search').addEventListener("keyup", (e) => { if (e.key === "Enter") { sendRequest() }})
+
+function showToast(message, status = "#FFFFFF", dismissible = true, duration = 5000) {
+    Snackbar.show({
+        actionTextColor: status,
+        pos: 'bottom-left',
+        text: message,
+        actionText: 'Dismiss',
+        width: 'auto',
+        duration: duration,
+        textColor: "#FFFFFF",
+        showAction: dismissible,
+        backgroundColor: '#323232'
+    })
+}
 
 const 
     spinner = document.getElementById('spinner'),
@@ -21,14 +37,6 @@ window.addEventListener('load', () => {
 
     document.getElementById("year").innerText = new Date().getFullYear()
 })
-
-function showToast(message) {
-    let snackbar = document.getElementById('snackbar')
-    document.getElementById("snack").innerText = message
-    
-    snackbar.className = "show"
-    setTimeout(() => { snackbar.className = snackbar.className.replace("show", "") }, 5800)
-}
 
 async function getTimeZone(code) {
     var tz = ct.getCountry(code);
@@ -59,6 +67,7 @@ async function loadResponse(location) {
                     document.getElementById("degree-feels-like").innerHTML = Math.trunc(data.main.feels_like) + "°"
                     document.getElementById("description").innerHTML = `${data.weather[0].main} | ${data.weather[0].description}`
                     
+                    document.title = "Weather in " + location;
                     switch(data.weather[0].main.toLowerCase()) {
                         case 'drizzle':
                         case 'rain': source[0].src = banners.rain

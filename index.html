@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#2196fa"/>
-    <meta name="msapplication-navbutton-color" content="#2196fa"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="#2196fa"/>
+    <meta name="description" content=". Enjoy!">  
+	<meta name="author" content="MovieBox">
+	<meta name="keywords" content="Movie, Serial, TV Shows, MovieBox">
+
+    <meta name="theme-color" content="#000000"/>
+    <meta name="msapplication-navbutton-color" content="#000000"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>Weather</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/js-snackbar-master/snackbar.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <main role="main">
+    <main role="main" class="container">
         <div>
-            <div id="snackbar"><span id="snack"></span></div>
             <video autoplay muted loop class="background-video" id="video">
                 <source src="" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -69,7 +79,8 @@
         </div>
     </main>
 </body>
+<script src="assets/js-snackbar-master/snackbar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/manuelmhtr/countries-and-timezones@latest/dist/index.min.js" type="text/javascript"></script>
-<script src="js/app.js"></script>
+<script src="assets/js/app.js"></script>
 </html>
